@@ -1,0 +1,8 @@
+relationship c4529c1f-40db-7a93-5733-0ba8c8f2cf82
+	fromColumn: fact_sales_details.product_key
+	toColumn: dim_products.product_key
+
+relationship 99d74f6c-9636-240b-3b81-8aa845b3e111
+	fromColumn: fact_sales_details.customer_key
+	toColumn: dim_customers.customer_key
+

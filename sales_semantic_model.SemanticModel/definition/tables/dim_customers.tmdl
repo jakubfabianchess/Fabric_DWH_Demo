@@ -1,0 +1,114 @@
+table dim_customers
+	lineageTag: 3e77cb0b-04c8-411b-b98e-32d8023a289b
+	sourceLineageTag: [dbo].[dim_customers]
+
+	column customer_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4398948d-bc02-4778-a01e-c591550d5ea7
+		sourceLineageTag: customer_key
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9b754cd7-6d69-45ba-93a2-2c24323f56f5
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_number
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37fe569a-3db7-46e1-8ea2-d06cc874c56f
+		sourceLineageTag: customer_number
+		summarizeBy: none
+		sourceColumn: customer_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 01c9d08b-eb0e-441e-8952-ed061337f5d7
+		sourceLineageTag: first_name
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1fc29b27-628e-4641-b482-5b6344e47f57
+		sourceLineageTag: last_name
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bad5d395-e1fb-46bb-a234-b73b4bf140d4
+		sourceLineageTag: country
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column marital_status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2251fd81-e2fe-40f1-830a-030f17fabe1f
+		sourceLineageTag: marital_status
+		summarizeBy: none
+		sourceColumn: marital_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d287d2df-011d-41ea-85fa-542072d3db85
+		sourceLineageTag: gender
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column birthdate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 315301fc-32b4-4b70-a0e4-372d99d44563
+		sourceLineageTag: birthdate
+		summarizeBy: none
+		sourceColumn: birthdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7862d7f5-632b-4d50-b0f8-7045c7a89e80
+		sourceLineageTag: create_date
+		summarizeBy: none
+		sourceColumn: create_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customers = entity
+		mode: directLake
+		source
+			entityName: dim_customers
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
